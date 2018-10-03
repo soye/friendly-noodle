@@ -1,0 +1,17 @@
+{
+  "name": "friendly-noodle",
+  "private": true,
+  "dependencies": {
+    "@rails/webpacker": "3.5",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb-standard": "^2.1.6",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-router-dom": "^4.3.1"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "2.11.2"
+  }
+}
