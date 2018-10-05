@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import Stats from './Stats';
+import '../assets/stylesheets/app.css';
+import SnakeHeadSprite from '../assets/images/snake-head-solo.gif';
 
 export default class World extends Component {
   constructor(props) {
     super(props);
-    this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.handleKeyUp = this.handleKeyUp.bind(this);
   }
 
   componentDidMount() {
@@ -16,14 +18,14 @@ export default class World extends Component {
       yPos: 0
     });
 
-    document.addEventListener('keyup', this.handleKeyDown, false);
+    document.addEventListener('keyup', this.handleKeyUp, false);
   }
 
   componentWillUnmount() {
-    document.removeEventListener('keyup', this.handleKeyDown, false);
+    document.removeEventListener('keyup', this.handleKeyUp, false);
   }
 
-  handleKeyDown(e) {
+  handleKeyUp(e) {
     const key = e.key;
     this.setState({ arrowKey: key });
 
