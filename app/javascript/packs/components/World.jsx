@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import Snake from './Snake';
 import Stats from './Stats';
 import '../assets/stylesheets/app.css';
-import SnakeHeadSprite from '../assets/images/snake-head-solo.gif';
 
 export default class World extends Component {
   constructor(props) {
@@ -55,6 +55,10 @@ export default class World extends Component {
   render() {
     return (
       <div>
+        <Snake
+          xPos={0}
+          yPos={0}
+        />
         <Stats {...this.state} />
       </div>
     );
